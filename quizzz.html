@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+.btn{
+ margin-left: 50%;
+ margin-right: 50%;
+
+}
+
+
+</style>
+
+
+
+
+    <title>quizz</title>
+    <style>
+      
+     
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="result text-center d-none">
+    <div class="jumbotron lead">
+      <p>You are score<span></span>/150</p>
+  </div>
+  </div>
+<div class="container bg-secondary">
+
+
+
+      <form>
+        <p>1.HTML5 stands for</p>
+        <div>
+        <input type="radio" name="q1" id=""value="A">
+        <label >A.hyper text mark up language</label>
+        </div>
+        <div>
+        <input type="radio" name="q1" id=""value="B">
+        <label class="form-check-label">B.header text markdown league</label>
+        </div>
+        <div>
+        <input type="radio" name="q1" id=""value="C">
+        <label >C.header text mark up language</label>
+        </div>
+
+
+
+
+        <p>2.Choose the correct HTML element for the largest heading:</p>
+        <div>
+        <input type="radio" name="q2" id=""value="A">
+        <label >A.h1     
+          
+         
+         </label>
+        </div>
+        <div>
+        <input type="radio" name="q2" id=""value="B">
+        <label >B.h4 <h6></label>
+      
+        </div>
+        <div>
+        <input type="radio" name="q2" id=""value="C">
+        <label >C.h6 <head></label>
+        </div>
+
+
+
+
+
+
+        <p>3.Inline elements are normally displayed without starting a new line.</p>
+        <div>
+        <input type="radio" name="q3" id=""value="A">
+        <label >A.true</label>
+        </div>
+        <div>
+        <input type="radio" name="q3" id=""value="B">
+        <label >B.false</label>
+        </div>
+        <div>
+       
+
+
+        <p>4.How can you make a numbered list?</p>
+        <div>
+        <input type="radio" name="q4" id=""value="A">
+        <label >A.ol</label>
+        </div>
+        <div>
+        <input type="radio" name="q4" id=""value="B">
+        <label >B.ul</label>
+        </div>
+        <div>
+        <input type="radio" name="q4" id=""value="C">
+        <label >C.list</label>
+        </div>
+        
+       
+
+
+
+
+        <p>5.How can you make a bulleted list?<p>
+        <div>
+        <input type="radio" name="q5" id=""value="A">
+        <label >A.ol</label>
+        </div>
+        <div>
+        <input type="radio" name="q5" id=""value="B">
+        <label >B.ul</label>
+        </div>
+        <div>
+        <input type="radio" name="q5" id=""value="C">
+        <label >C.list</label>
+        </div>
+        <p>6.Block elements are normally displayed without starting a new line.<p>
+          <div>
+          <input type="radio" name="q6" id=""value="A">
+          <label >A.true</label>
+          </div>
+          <div>
+          <input type="radio" name="q6" id=""value="B">
+          <label >B.false</label>
+          </div>
+          <div>
+          
+
+
+
+
+
+        <input class=" btn btn-success"type="submit" value="submit">
+      </form>
+      </div>
+        
+        
+
+
+
+
+       
+     
+
+<script>
+
+  var r1=document.querySelector('.result');
+var f1=document.querySelector('form');
+let answers=['A','A','A','A','B','B'];
+f1.addEventListener('submit',function(e){
+  
+  e.preventDefault();
+  //console.log(f1.q1.value);
+users=[f1.q1.value,f1.q2.value,f1.q3.value,f1.q4.value,f1.q5.value,f1.q6.value];
+  //console.log(users);
+  let score=0;
+  users.forEach(function(a1,i) {
+    //console.log(a1==answers[i]);
+    if(a1==answers[i]){
+score+=25;
+
+    }
+
+   
+console.log(score);
+scrollTo(0,0);
+    r1.classList.remove('d-none');
+    output=0;
+
+var timer=setInterval(function(){
+r1.querySelector('span').textContent=`${output}`;
+if(output===score){
+clearInterval(timer);
+}
+else{
+output++;
+// console.log(output);
+}
+},50)
+
+
+    
+
+  })
+
+
+
+
+
+
+})
+
+</script>
+
+
+
+
+
+
+
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
